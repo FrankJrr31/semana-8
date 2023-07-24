@@ -5,9 +5,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-//import jakarta.persistence.ManyToOne;
-//import jakarta.persistence.JoinColumn;
-//import jakarta.persistence.CascadeType;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.CascadeType;
 
 @Entity
 @Table(name = "curso")
@@ -21,9 +21,9 @@ public class Curso {
 
     private Integer creditos;
 
-    //@ManyToOne(cascade = CascadeType.ALL)
-    //@JoinColumn(name = "id_carrera")
-    //private Carrera carrera;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_carrera")
+    private Carrera carrera;
 
     public Integer getId() {
         return id;
@@ -49,12 +49,12 @@ public class Curso {
         this.creditos = creditos;
     }
 
-    //public Carrera getCarrera() {
-    //    return carrera;
-    //}
+    public Carrera getCarrera() {
+        return carrera;
+    }
 
-    //public void setCarrera(Carrera carrera) {
-    //    this.carrera = carrera;
-    //}
+    public void setCarrera(Carrera carrera) {
+        this.carrera = carrera;
+    }
     
 }
