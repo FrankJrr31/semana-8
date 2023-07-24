@@ -1,5 +1,5 @@
 #@server = https://frankjrr31-miniature-engine-9p44465w4jjh6gp-8080.preview.app.github.dev
-@server = https://sem8-vomz.onrender.com
+@server = 
 @apiserver = {{server}}/api/curso
 ###
 GET {{server}}/
